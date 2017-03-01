@@ -1,8 +1,8 @@
 <?php
-	
-	namespace html;
 
-	class document
+	namespace Html;
+
+	class Document
 	{
 		public static function script ($src)
 		{
@@ -41,7 +41,7 @@
 	    /**
 	    	returns current protocol -> http:// or https://
 	    */
-	    public static function protocol ()	
+	    public static function protocol ()
 	    {
 			return stripos($_SERVER['SERVER_PROTOCOL'],'https')===true?'https://':'http://';
 	    }

@@ -1,8 +1,8 @@
 <?php
 
-	namespace html;
+	namespace Html;
 
-	class select
+	class Select
 	{
 	    /**
 	    	parses select options based on $items array
@@ -14,7 +14,7 @@
 		public static function options ($items, $active=null, $key='id', $value='name')
 		{
 			$output = '';
-			if ($items)	
+			if ($items)
 			{
 				foreach ($items as $id => $item)
 				{
@@ -24,12 +24,12 @@
 					}
 					else
 					{
-						$output .= "<option value='".$id."' ".($active==$id?'selected':'').">".$item."</option>";	
+						$output .= "<option value='".$id."' ".($active==$id?'selected':'').">".$item."</option>";
 					}
 				}
 			}
 			return $output;
-		}		
+		}
 	}
 
 ?>
