@@ -36,7 +36,6 @@
 	    		$resource = null;
 	    	}
 	    	return ($resource===null?$_SERVER['SCRIPT_NAME']:$resource).(count($parameters)?'?'.http_build_query($parameters):'');
-	    	return self::protocol().$_SERVER['SERVER_NAME'].($resource===null?$_SERVER['SCRIPT_NAME']:$resource).(count($parameters)?'?'.http_build_query($parameters):'');
 	    }
 	    /**
 	    	returns current protocol -> http:// or https://
