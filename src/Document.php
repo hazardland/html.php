@@ -18,7 +18,7 @@
 		*/
 	    public static function redirect ($location=null)
 	    {
-	    	header ('Location: '.($location===null?self::location():''));
+	    	header ('Location: '.($location===null?self::location():$location));
 	        ob_end_flush();
 	        exit;
 	    }
