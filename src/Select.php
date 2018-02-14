@@ -18,7 +18,11 @@
 			{
 				foreach ($items as $id => $item)
 				{
-					if (is_array($item))
+					if (is_object($item))
+					{
+						$output .= "<option value='".$item->{$key}."' ".($active==$item->{$key}?'selected':'').">".$item->{$value}."</option>";
+					}
+					else if (is_array($item))
 					{
 						$output .= "<option value='".$item[$key]."' ".($active==$item[$key]?'selected':'').">".$item[$value]."</option>";
 					}
